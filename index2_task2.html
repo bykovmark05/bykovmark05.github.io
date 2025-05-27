@@ -1,0 +1,21 @@
+<script>
+if (confirm('Доброго времени суток, у этой страницы есть к вам вопрос, вы готовы ответить?')) {
+    var age;
+    do {
+        age = prompt('Сколько вам лет?');
+        if (age == null) {
+            alert("Пожалуйста, введите возраст.");
+        } else if (age == "") {
+            alert("Вы не ввели возраст.");
+        } else {
+            var confirmation = confirm("Вы уверены, что вам " + age + " ?");
+            if (confirmation) {
+                alert("Спасибо за ваш ответ!");
+            } else {
+                age = null;
+            }
+        }
+    } while (age == null);
+}
+alert("Спасибо, что уделили время");
+</script>
